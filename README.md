@@ -1,4 +1,4 @@
-# LoveLight Scaffold
+# LoveLight
 
 ✨ The integration layer connecting Ethereum token events to LoveLight sensory output, Phi meaning generation, and Library archiving.
 
