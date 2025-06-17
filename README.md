@@ -1,7 +1,7 @@
 # LoveLight
 
 🌟 *LoveLight* is an evolving art-tech project devoted to evoking the feeling of pure love —  
-an all-embracing joy, a soft spiral of satisfaction, a radiant light from the heart.  
+an all-embracing joy, a soft spiral of satisfaction, a radiant light from the heart.
 
 This repository gathers the visual, audio, and interactive components that together form  
 a digital sanctuary — a hug made of code, sound, and symbol.
@@ -20,3 +20,15 @@ To create an experience that:
 
 ## 🌱 How to Begin
 Clone the repo and explore:
+```
+git clone https://github.com/zeropoet/LoveLight.git
+```
+Run the interactive prototype:
+```
+cd LoveLight/interactive
+python hug_prototype.py
+```
+(Requires `pygame`.)
+
+## 🤍 License
+This project is shared with love under the MIT License.
