@@ -1,1 +1,1 @@
-The Void Architecture
+Void Architecture
