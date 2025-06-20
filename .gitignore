@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
+# Build outputs (if using static site generator later)
+dist/
+_build/
+_site/
