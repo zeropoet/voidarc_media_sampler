@@ -12,6 +12,7 @@ Install the Python dependencies with:
 
 ```bash
 pip install moviepy
+pip install ffmpeg-python
 ```
 
 ## Usage
