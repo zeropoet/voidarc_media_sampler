@@ -112,20 +112,7 @@ def sample_from_media_library(
     return final_video_path
 
 
-def fetch_videos_from_erc721(collection_address: str, destination: Path) -> List[Path]:
-    """Placeholder for fetching videos from an ERC-721 collection via IPFS.
 
-    This function is not implemented and exists as a stub for future work.
-    """
-    raise NotImplementedError("Fetching from ERC-721 collections is not yet implemented.")
-
-
-def fetch_media_from_erc1155(collection_address: str, destination: Path) -> List[Path]:
-    """Placeholder for fetching media from an ERC-1155 collection via IPFS.
-
-    This function is not implemented and exists as a stub for future work.
-    """
-    raise NotImplementedError("Fetching from ERC-1155 collections is not yet implemented.")
 
 
 if __name__ == "__main__":

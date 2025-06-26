@@ -20,6 +20,19 @@ pip install Flask
 ## Usage
 
 
+### Web App (Recommended)
+
+1. Start the Flask app:
+   ```bash
+   python app.py
+   ```
+2. Open your browser and go to the URL shown in your terminal (for GitHub Codespaces, it will look like `https://<your-space>-5000.app.github.dev/`).
+3. Use the web interface to sample media and view the latest generated video.
+
+### Command Line
+
+You can also run the script directly:
+
 ```
 python sample_media/sample_media.py sample_media/library_dir sample_media/output_dir --samples 3 --duration 1.0
 ```
