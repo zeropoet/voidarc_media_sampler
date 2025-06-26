@@ -1,4 +1,4 @@
-# SAMPLE-MEDIA
+# SAMPLE_MEDIA
 
 This repository includes utilities for sampling frames and audio snippets from a library of media files (images, video, or audio) and recombining them into a new video. The `sample_media.py` script uses [MoviePy](https://zulko.github.io/moviepy/) to handle processing.
 
@@ -8,17 +8,20 @@ This repository includes utilities for sampling frames and audio snippets from a
 - [`moviepy`](https://pypi.org/project/moviepy/)
 - `ffmpeg` installed on your system
 
+
 Install the Python dependencies with:
 
 ```bash
 pip install moviepy
 pip install ffmpeg-python
+pip install Flask
 ```
 
 ## Usage
 
+
 ```
-python sample-media/sample_media.py sample-media/library_dir sample-media/output_dir --samples 3 --duration 1.0
+python sample_media/sample_media.py sample_media/library_dir sample_media/output_dir --samples 3 --duration 1.0
 ```
 
 - `library_dir` is a folder containing supported media files (images, video, or audio) to sample from.

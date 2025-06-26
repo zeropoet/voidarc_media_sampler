@@ -16,15 +16,17 @@
 <body>
   <div class="container">
     <video id="finalVideo" controls></video>
+
     <form id="sampleForm">
-      <label for="contract">Ethereum Contract Address</label>
-      <input type="text" id="contract" required />
+      <label for="coll_contract">Ethereum Contract Address</label>
+      <input type="text" id="coll_contract" required />
       <label for="samples">Samples per file</label>
       <input type="number" id="samples" value="1" min="1" />
       <label for="duration">Clip duration (seconds)</label>
       <input type="number" id="duration" value="1" min="0.1" step="0.1" />
       <button type="submit">Generate Video</button>
     </form>
+
   </div>
   <script>
     async function loadLatestVideo() {
@@ -37,9 +39,10 @@
       }
     }
 
+
     document.getElementById('sampleForm').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const contract = document.getElementById('contract').value;
+      const contract = document.getElementById('coll_contract').value;
       const samples = document.getElementById('samples').value;
       const duration = document.getElementById('duration').value;
       const res = await fetch('/api/sample', {
