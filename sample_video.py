@@ -1,7 +1,7 @@
 import random
 from pathlib import Path
 from typing import List
-from moviepy.editor import VideoFileClip, concatenate_videoclips
+from moviepy import VideoFileClip, concatenate_videoclips
 
 
 def sample_from_library(library_dir: Path, output_dir: Path, num_samples_per_video: int = 1,
