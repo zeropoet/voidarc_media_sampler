@@ -37,7 +37,7 @@ def sample_from_library(library_dir: Path, output_dir: Path, num_samples_per_vid
         for i in range(num_samples_per_video):
             max_start = max(clip.duration - sample_duration, 0)
             start_time = random.uniform(0, max_start)
-            sub = clip.subclip(start_time, start_time + sample_duration)
+            sub = clip.subclipped(start_time, start_time + sample_duration)
             frame_path = frames_dir / f"{video_file.stem}_{i}.png"
             sub.save_frame(str(frame_path), t=0)
             audio_path = audio_dir / f"{video_file.stem}_{i}.wav"
