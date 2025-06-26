@@ -13,7 +13,7 @@ Install the Python dependencies with:
 
 ```bash
 pip install moviepy
-pip install ffmpeg-python
+pip install ffmpeg
 pip install Flask
 ```
 

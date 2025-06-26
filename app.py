@@ -19,6 +19,9 @@ def latest_video() -> Path | None:
     videos = sorted(OUTPUT_DIR.glob("final_*.mp4"))
     return videos[-1] if videos else None
 
+@app.route("/")
+def home():
+    return "<h1>Welcome to the Void Architecture App!</h1>"
 
 @app.route("/videos")
 def get_latest_video():
