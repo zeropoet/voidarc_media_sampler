@@ -22,10 +22,10 @@ python sample-media/sample_media.py sample-media/library_dir sample-media/output
 ```
 
 - `library_dir` is a folder containing supported media files (images, video, or audio) to sample from.
-- `output_dir` will contain the extracted frame images, audio snippets, and the final video `final.mp4`.
+- `output_dir` will contain the extracted frame images, audio snippets, and the generated video files. Each run creates an incremented file like `final_001.mp4`, `final_002.mp4`, and so on.
 - `--samples` defines how many random samples to pull from each file.
 - `--duration` sets the length (in seconds) of each sampled clip.
 
 ## ERC-721 Support
 
-A stub function `fetch_videos_from_erc721` is provided for future integration with Ethereum collections via IPFS. It is currently not implemented.
+A stub function `fetch_videos_from_erc721` is provided for future integration with Ethereum collections via IPFS. It is currently not implemented. An additional stub `fetch_media_from_erc1155` exists for ERC-1155 collections.
