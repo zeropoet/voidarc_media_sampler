@@ -1,7 +1,7 @@
 import random
 from pathlib import Path
 from typing import List
-from moviepy.editor import (
+from moviepy import (
     VideoFileClip,
     ImageClip,
     AudioFileClip,
@@ -57,9 +57,12 @@ def sample_from_media_library(
                 clip = VideoFileClip(str(media_file))
                 max_start = max(clip.duration - sample_duration, 0)
                 start_time = random.uniform(0, max_start)
-                sub = clip.subclip(start_time, start_time + sample_duration)
+                if hasattr(clip, "subclip"):
+                    sub = clip.subclip(start_time, start_time + sample_duration)
+                else:
+                    sub = clip.subclipped(start_time, start_time + sample_duration)
             elif ext in supported_image:
-                sub = ImageClip(str(media_file)).set_duration(sample_duration)
+                sub = ImageClip(str(media_file)).with_duration(sample_duration)
             elif ext in supported_audio:
                 audio_clip = AudioFileClip(str(media_file))
                 max_start = max(audio_clip.duration - sample_duration, 0)
@@ -70,8 +73,15 @@ def sample_from_media_library(
             else:
                 continue
 
+
             frame_path = frames_dir / f"{media_file.stem}_{i}.png"
-            sub.save_frame(str(frame_path), t=0)
+            if sub is not None:
+                try:
+                    sub.save_frame(str(frame_path), t=0)
+                except Exception as e:
+                    print(f"Error saving frame for {media_file} sample {i}: {e} (type: {type(sub)})")
+            else:
+                print(f"Warning: sub is None for {media_file} sample {i}")
 
             if sub.audio:
                 audio_path = audio_dir / f"{media_file.stem}_{i}.wav"
@@ -79,10 +89,7 @@ def sample_from_media_library(
 
             clips.append(sub)
 
-        if ext in supported_video:
-            clip.close()
-        elif ext in supported_audio:
-            audio_clip.close()
+        # Do not close clip or audio_clip here; let moviepy handle it after writing the final video
 
     if not clips:
         raise ValueError("No media files found in library_dir")
