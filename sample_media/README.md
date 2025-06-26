@@ -45,3 +45,4 @@ python sample_media/sample_media.py sample_media/library_dir sample_media/output
 ## ERC-721 Support
 
 A stub function `fetch_videos_from_erc721` is provided for future integration with Ethereum collections via IPFS. It is currently not implemented. An additional stub `fetch_media_from_erc1155` exists for ERC-1155 collections.
+

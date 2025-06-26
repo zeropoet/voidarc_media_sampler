@@ -125,3 +125,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     sample_from_media_library(args.library, args.output, args.samples, args.duration)
+
