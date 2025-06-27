@@ -1,4 +1,4 @@
-# sample_media
+# voidarc media sampler
 
 This repository includes utilities for sampling frames and audio snippets from a library of media files (images, video, or audio) and recombining them into a new video. The `sample_media.py` script uses [MoviePy](https://zulko.github.io/moviepy/) to handle processing.
 
