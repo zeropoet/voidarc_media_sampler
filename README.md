@@ -6,7 +6,7 @@ This repository includes utilities for sampling frames and audio snippets from a
 
 - Python 3.8+
 - [`moviepy`](https://pypi.org/project/moviepy/)
-- `ffmpeg` installed on your system
+- `ffmpeg`
 
 
 Install the Python dependencies with:
@@ -41,8 +41,3 @@ python sample_media/sample_media.py sample_media/library_dir sample_media/output
 - `output_dir` will contain the extracted frame images, audio snippets, and the generated video files. Each run creates an incremented file like `final_001.mp4`, `final_002.mp4`, and so on.
 - `--samples` defines how many random samples to pull from each file.
 - `--duration` sets the length (in seconds) of each sampled clip.
-
-## ERC-721 Support
-
-A stub function `fetch_videos_from_erc721` is provided for future integration with Ethereum collections via IPFS. It is currently not implemented. An additional stub `fetch_media_from_erc1155` exists for ERC-1155 collections.
-
